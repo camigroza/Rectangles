@@ -1,3 +1,3 @@
 # Rectangles
-Given some points in cartesian coordinate (X, Y), it finds the number of rectangles that can be created by those points.
-Only rectangles that are parallel with the X, Y axes are taken into consideration.
+This program determines the maximum number of rectangles that can be constructed using a given set of points in cartesian coordinates (X, Y). 
+Only rectangles that are parallel to the X and Y axes are taken into account.
