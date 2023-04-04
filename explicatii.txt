@@ -1,0 +1,12 @@
+  Folosesc un container de tipul multiset<pair<double, double>> pentru a stoca punctele date, de coordonate (x,y). In acest fel, 
+ele vor fi implicit sortate in ordine crescatoare dupa valoarea lui x, iar daca exista mai multe puncte cu aceeasi valoare 
+pentru x, ele vor fi sortate crescator dupa valoarea lui y.
+  Folosesc un iterator it1 pentru a parcurge pe rand toate punctele (notatie A(xa,ya)). Cu iteratorul it2, merg doar prin punctele 
+care au valorile abscisei si ordonatei strict mai mari decat ale punctului A fixat (notatie B(xb,yb)). Astfel, punctele A si B pot fi 
+eventuale colturi ale unui dreptunghi. 
+  Acestea fiind fixate, verificam daca exista in multiset punctele corespunzatoare celorlalte colturi, iar daca exista ambele, 
+inseamna ca avem un dreptunghi.
+
+  Aceasta metoda este eficienta deoarece pentru un punct A, cautam "coltul" opus B situat pe grafic in partea de nord-est, astfel 
+nu riscam sa se numere un dreptunghi de mai multe ori. De asemenea, nu iteram inutil prin toate punctele, ci doar prin cele care 
+ar putea forma un dreptunghi cu punctul deja fixat.
